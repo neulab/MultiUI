@@ -1,0 +1,7 @@
+model_path: Qwen/Qwen-VL-Chat
+model_adapter: QwenVLAdapter
+temperature: 0.0
+
+webqa_prompt: |+
+  {question}
+  You should directly tell me your answer in the fewest words possible, and do not output any explanation or any other contents.

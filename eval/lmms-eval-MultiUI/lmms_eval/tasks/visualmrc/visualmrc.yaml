@@ -1,0 +1,3 @@
+group: visualmrc
+task:
+- visualmrc_test

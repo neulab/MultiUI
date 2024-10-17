@@ -1,0 +1,3 @@
+group: widgetcap
+task:
+- widgetcap_test

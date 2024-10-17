@@ -1,0 +1,36 @@
+dataset_path: jeepliu/VisualMRC
+task: "visualmrc_test"
+test_split: test
+output_type: generate_until
+doc_to_visual: !function utils.visualmrc_doc_to_visual
+doc_to_text: !function utils.visualmrc_doc_to_text
+doc_to_target: "answer"
+# The return value of process_results will be used by metrics
+process_results: !function utils.visualmrc_process_results
+# Note that the metric name can be either a registed metric function (such as the case for GQA) or a key name returned by process_results
+generation_kwargs:
+  max_new_tokens: 48
+metric_list:
+  - metric: visualmrc_Bleu_4 
+    aggregation : !function utils.visualmrc_bleu4
+    higher_is_better : true
+  - metric: visualmrc_Bleu_3
+    aggregation : !function utils.visualmrc_bleu3
+    higher_is_better : true
+  - metric: visualmrc_Bleu_2
+    aggregation : !function utils.visualmrc_bleu2
+    higher_is_better : true
+  - metric: visualmrc_Bleu_1
+    aggregation : !function utils.visualmrc_bleu1
+    higher_is_better : true
+  - metric: visualmrc_METEOR
+    aggregation : !function utils.visualmrc_meteor
+    higher_is_better : true
+  - metric: visualmrc_ROUGE_L
+    aggregation : !function utils.visualmrc_rougel
+    higher_is_better : true
+  - metric: visualmrc_CIDEr
+    aggregation : !function utils.visualmrc_cider
+    higher_is_better : true
+metadata:
+  - version: 0.0

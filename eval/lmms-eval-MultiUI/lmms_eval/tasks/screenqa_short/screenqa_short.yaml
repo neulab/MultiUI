@@ -1,0 +1,3 @@
+group: screenqa_short
+task:
+- screenqa_short_test
