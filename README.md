@@ -17,6 +17,36 @@ This repository is divded into two parts:
 
 ## Run Evaluation
 
+### VisualWebBench
+To evaluate visualwebbench related tasks:
+```bash
+cd eval/VisualWebBench
+bash run.sh
+```
+
+
+
+### Lmms-Eval-MultiUI
+We evaluate refcoco+, refexp, screenqa_short, screenspot, visualmrc, widgecap, [todo: add the rest] with the lmms-eval framework.
+
+To evaluate these benchmarks:
+```bash
+cd eval/lmms-eval-MultiUI
+```
+```bash
+model=MODEL_NAME
+model_type=MODEL_TYPE
+python3 -m accelerate.commands.launch \
+         --num_processes=8 \
+         -m lmms_eval \
+         --model $model_type \
+         --model_args pretrained=$model,conv_template=qwen_2 \
+         --tasks ${task} \
+         --batch_size 1 \
+         --log_samples \
+         --log_samples_suffix ${task} \
+         --output_path eval_logs
+```
 
 ### Mind2Web
 Download our Mind2Web evaluation dataset from [huggingface]() and place it under `eval/Mind2Web-SeeAct/src/offline_experiments/screenshot_generation/data`
@@ -24,8 +54,7 @@ Download our Mind2Web evaluation dataset from [huggingface]() and place it under
 Run inference
 ```bash
 cd eval/Mind2Web-SeeAct/src/offline_experiments/
-```
-```bash
+
 python eval_m2w.py \
 --model_name MODEL_NAME \
 --model_path MODEL_PATH \
