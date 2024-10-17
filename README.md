@@ -8,7 +8,7 @@ MultitUI is a dataset of 7.3 million samples spanning various UI types and tasks
 
 This repository is divded into two parts:
 
-- **Train**: contains training code for LLaVA-OneVision, base models we used.
+- **Train**: contains training code for LLaVA-OneVision, the base model we used.
 
 - **Evaluation**: contains evaluation code on all benchmarks we tested in the paper.
   
@@ -18,7 +18,7 @@ This repository is divded into two parts:
 ## Run Evaluation
 
 ### VisualWebBench
-To evaluate visualwebbench related tasks:
+To evaluate VisualWebBench related tasks:
 ```bash
 cd eval/VisualWebBench
 bash run.sh
@@ -27,9 +27,9 @@ bash run.sh
 
 
 ### Lmms-Eval-MultiUI
-We evaluate refcoco+, refexp, screenqa_short, screenspot, visualmrc, widgecap, [todo: add the rest] with the lmms-eval framework.
+We evaluate RefCOCO+, RefExp, ScreenQA Short, ScreenSpot, Visual MRC, Widget Cap, Doc VQA, Chart QA, Text VQA, Info VQA, and OCR Bench with the lmms-eval framework.
 
-To evaluate these benchmarks:
+To evaluate on these datasets:
 ```bash
 cd eval/lmms-eval-MultiUI
 ```
@@ -49,7 +49,7 @@ python3 -m accelerate.commands.launch \
 ```
 
 ### Mind2Web
-Download our Mind2Web evaluation dataset from [huggingface]() and place it under `eval/Mind2Web-SeeAct/src/offline_experiments/screenshot_generation/data`
+Download our Mind2Web evaluation dataset from [huggingface](https://huggingface.co/datasets/neulab/Mind2Web_bbox_eval) and place it under `eval/Mind2Web-SeeAct/src/offline_experiments/screenshot_generation/data`
 
 Run inference
 ```bash
