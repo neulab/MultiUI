@@ -15,6 +15,13 @@ This repository is divided into two parts:
 ## Dataset Download
 - **MultiUI**: Download our 7.3 million sample training dataset from [huggingface](https://huggingface.co/datasets/neulab/MultiUI).
 
+## Models Checkpoint
+
+|  Model Name   |        LLM        | Vision Tower |                          Checkpoint                          |
+| :-----------: | :---------------: | :----------: | :----------------------------------------------------------: |
+|   UIX-Qwen2   | [Qwen2-7B-Instruct](https://huggingface.co/Qwen/Qwen2-7B-Instruct) |    [siglip-so400m-patch14-384](https://huggingface.co/google/siglip-so400m-patch14-384)    | [neulab/UIX-Qwen2](https://huggingface.co/neulab/UIX-Qwen2)  |
+| UIX-Qwen2-M2W | [Qwen2-7B-Instruct](https://huggingface.co/Qwen/Qwen2-7B-Instruct) |    [siglip-so400m-patch14-384](https://huggingface.co/google/siglip-so400m-patch14-384)    | [neulab/UIX-Qwen2-Mind2Web](https://huggingface.co/neulab/UIX-Qwen2-Mind2Web) |
+
 ## Run Evaluation
 
 ### VisualWebBench
