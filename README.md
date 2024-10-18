@@ -27,7 +27,7 @@ bash run.sh
 
 
 ### lmms-eval-MultiUI
-We evaluate on GUI understanding&grounding benchmarks (WebSRC, ScreenQA-short, WidgetCap, ScreenSpot, RefExp), OCR/Doc/Chart-related QA, and general grounding benchmarks (DocVQA, ChartQA, TextVQA, InfoVQA, VisualMRC, OCRBench, RefCOCO+) with the [```lmms-eval```](https://github.com/EvolvingLMMs-Lab/lmms-eval) framework.
+We evaluate on GUI understanding&grounding benchmarks (WebSRC, ScreenQA-short, WidgetCap, ScreenSpot, RefExp), OCR/Doc/Chart-related QA (DocVQA, ChartQA, TextVQA, InfoVQA, VisualMRC, OCRBench), and general grounding benchmark (RefCOCO+) with the [```lmms-eval```](https://github.com/EvolvingLMMs-Lab/lmms-eval) framework.
 
 To evaluate these datasets:
 ```bash
